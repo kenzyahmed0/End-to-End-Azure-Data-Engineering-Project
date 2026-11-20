@@ -41,15 +41,12 @@ The project uses five retail datasets:
 
 Azure Data Factory was used as part of the data ingestion process to transfer source data into Azure Data Lake Storage Gen2.
 
-**ADF Pipeline:**
-
-<!-- INSERT IMAGE: adf-pipeline.png -->
 
 *Figure 2: Azure Data Factory pipeline.*
 
 **Pipeline Execution:**
 
-<!-- INSERT IMAGE: adf-monitor.png -->
+<img width="1532" height="751" alt="image" src="https://github.com/user-attachments/assets/345edc29-3244-4ae7-aa57-ca7cec5c9156" />
 
 *Figure 3: Pipeline execution monitoring, if available.*
 
@@ -61,7 +58,8 @@ The data lake is organized into three layers:
 - **Silver:** Stores cleaned and transformed data.
 - **Gold:** Stores aggregated and analytics-ready datasets.
 
-<!-- INSERT IMAGE: storage-containers.png -->
+<img width="1530" height="727" alt="image" src="https://github.com/user-attachments/assets/7e29f545-d16b-4ecc-99f6-0fa352f9d5c8" />
+
 
 *Figure 4: Bronze, Silver, and Gold storage containers.*
 
@@ -71,7 +69,8 @@ The source CSV files were read from the Bronze layer using PySpark in Azure Data
 
 The Sales dataset contains 1,040,200 records and five columns.
 
-<!-- INSERT IMAGE: bronze-layer.png -->
+<img width="1534" height="741" alt="image" src="https://github.com/user-attachments/assets/ccc7182a-709c-42bb-9b8e-fdb8630e5b72" />
+
 
 *Figure 5: Reading and displaying raw data in Databricks.*
 
@@ -87,7 +86,8 @@ The Silver layer applies data cleaning and preparation operations, including:
 
 The transformations were applied to Categories, Products, Sales, Stores, and Warranty datasets.
 
-<!-- INSERT IMAGE: silver-layer.png -->
+<img width="1535" height="731" alt="image" src="https://github.com/user-attachments/assets/a4d641fe-90a4-4db4-93ea-032c4a3fdfcf" />
+
 
 *Figure 6: Silver layer transformations using PySpark.*
 
@@ -102,7 +102,9 @@ The Gold layer contains four analytical datasets created using PySpark aggregati
 | store_sales | Sales metrics by store | 75 |
 | warranty_analysis | Warranty claims grouped by repair status | 4 |
 
-<!-- INSERT IMAGE: gold-layer.png -->
+<img width="1534" height="732" alt="image" src="https://github.com/user-attachments/assets/2c67dadd-1916-4662-9986-c16378afd037" />
+<img width="1534" height="735" alt="image" src="https://github.com/user-attachments/assets/28b35f57-cf74-49a0-ba13-86bf75cca4a0" />
+
 
 *Figure 7: Creating Gold analytical datasets.*
 
@@ -114,8 +116,9 @@ Data quality checks were performed to validate relationships between the dataset
 2. Checking sales records with missing store references.
 3. Checking products with missing category references.
 4. Checking warranty claims with missing sales references.
+   
+<img width="1534" height="735" alt="image" src="https://github.com/user-attachments/assets/704bb09b-863a-4017-9442-29fb6072b78c" />
 
-<!-- INSERT IMAGE: data-quality.png -->
 
 *Figure 8: Data quality validation using PySpark.*
 
@@ -132,9 +135,9 @@ store_sales: 75 rows
 warranty_analysis: 4 rows
 ```
 
-<!-- INSERT IMAGE: gold-validation.png -->
+<img width="1528" height="742" alt="image" src="https://github.com/user-attachments/assets/39c999ea-6af1-4972-bdf4-7d28a83c7334" />
 
-*Figure 9: Gold datasets validation results.*
+
 
 ## Technologies Used
 
